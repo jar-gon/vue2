@@ -1,0 +1,51 @@
+@import './reset';
+@import './var';
+@import './common';
+@import './custom';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  color: $color-text;
+  margin: 0 auto;
+}
+body,
+input,
+label,
+select,
+option,
+textarea,
+button,
+fieldset,
+legend {
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', tahoma, arial,
+    simsun, '宋体';
+}
+
+// 链接
+a {
+  text-decoration: none;
+  background: transparent;
+  color: $color-blue;
+}
+
+a:visited {
+  // color: $--color-text-secondary;
+  color: purple;
+}
+a:hover {
+  color: $color-primary;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.body {
+  font-size: 14px;
+}

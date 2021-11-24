@@ -1,0 +1,1 @@
+集中管理所有的后端接口，统一赋给 Vue.prototype.$httpApi，在页面和组件中直接使用 this.$httpApi.studentList 来调用接口

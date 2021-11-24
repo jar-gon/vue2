@@ -1,0 +1,88 @@
+{
+  "name": "fe-vue-mobile-template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node build/dev.js",
+    "dev:main": "node build/dev.js main",
+    "serve": "vue-cli-service serve --mode dev",
+    "clean": "rimraf dist",
+    "lint": "vue-cli-service lint src pages",
+    "fat": "cross-env APP_RUN_ENV=fat npm run build",
+    "uat": "cross-env APP_RUN_ENV=uat npm run build",
+    "pro": "cross-env APP_RUN_ENV=pro npm run build",
+    "build": "node build/build.js",
+    "report": "vue-cli-service build --mode pro --report",
+    "commitmsg": "validate-commit-msg",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md && git commit -m 'docs: update changelog file'"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "core-js": "^3.19.1",
+    "date-fns": "^2.25.0",
+    "lodash": "^4.17.21",
+    "query-string": "^7.0.1",
+    "vant": "^2.12.31",
+    "vue": "^2.6.11",
+    "vue-i18n": "^8.26.7",
+    "vue-router": "^3.5.3",
+    "vuex": "^3.6.2",
+    "vuex-persistedstate": "^4.1.0",
+    "xss": "^1.0.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "amfe-flexible": "^2.2.1",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-component": "^1.1.1",
+    "babel-plugin-import": "^1.13.0",
+    "compression-webpack-plugin": "^5.0.0",
+    "cross-env": "^7.0.2",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.13.0",
+    "file-loader": "^6.0.0",
+    "fs-extra": "^9.0.1",
+    "husky": "^3.1.0",
+    "less": "^4.1.1",
+    "less-loader": "^7.3.0",
+    "lint-staged": "^11.0.0",
+    "mocker-api": "^2.2.0",
+    "mockjs": "^1.1.0",
+    "optimist": "^0.6.1",
+    "postcss-pxtorem": "^5.1.1",
+    "prettier": "^2.3.2",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
+    "validate-commit-msg": "^2.14.0",
+    "vconsole": "^3.7.0",
+    "vue-eslint-parser": "^7.1.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "validate-commit-msg"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue,}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{html,css,less,scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

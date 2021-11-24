@@ -1,0 +1,1 @@
+语言包文件名可以参考[vant](https://vant-contrib.gitee.io/vant/#/zh-CN/locale)
