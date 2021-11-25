@@ -1,16 +1,5 @@
 import axios from 'axios';
 import Vue from 'vue';
-import track from './track';
-
-const jssdkSendLog = (code, message, level = 'error') => {
-  if (!code || !message) {
-    return false;
-  }
-  track.sendLog(code, {
-    message,
-    level,
-  });
-};
 
 // 全局配置
 axios.defaults.retry = 1; //重试次数
@@ -93,8 +82,6 @@ service.interceptors.response.use(undefined, err => {
   });
 
   console.log('logMessage', logMessage, 'error config', config);
-
-  jssdkSendLog('request_api_failed', logMessage);
 
   // 判断是否配置了重试
   if (!config || !config.retry) return Promise.reject(err);

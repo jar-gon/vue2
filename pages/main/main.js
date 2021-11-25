@@ -5,8 +5,8 @@ import i18n from './i18n';
 import store from '@store';
 import '@base/main';
 import '@base/vconfig';
-import './styles/index.scss';
 import './ui';
+import './styles/index.scss';
 
 new Vue({
   router,

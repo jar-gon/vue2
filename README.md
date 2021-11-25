@@ -1,7 +1,7 @@
-# fe-vue-mobile-template
+# vue2
 h5模板
 
-基础模版来自 [fe-op-vue-mobile-template](https://gitlab.zmaxis.com/fe-template/fe-op-vue-mobile-template)， 并做了一些适应性修改。
+基础模版来自vue-cli， 并做了一些适应性修改。
 
 ## 功能点
 
