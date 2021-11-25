@@ -10,7 +10,7 @@ import localeLang from './locale';
 const localeStr = getLocale();
 
 // vant初始化语言
-Locale.use(localeStr, localeLang.vant);
+Locale.use(localeStr, localeLang[localeStr].vant);
 
 Vue.use(VueI18n);
 const i18n = new VueI18n({

@@ -1,5 +1,4 @@
 import Vue from 'vue';
-import track from '@helper/track';
 import filters from '@filters';
 import xss from 'xss';
 import { debounce, throttle } from 'lodash';
@@ -9,7 +8,6 @@ import { debounce, throttle } from 'lodash';
 // 全局存储一些默认的 appinfo 信息
 Vue.prototype.$appInfo = {};
 Vue.prototype.$setAppInfo = setAppInfo;
-Vue.prototype.$track = track;
 Vue.prototype.xss = xss;
 
 function setAppInfo(obj) {
@@ -43,7 +41,3 @@ Vue.prototype.$throttle = function () {
   }
   return throttle.apply(this, args);
 };
-
-// 埋点配置
-track.setConfig();
-track.setDefaults();

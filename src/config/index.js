@@ -3,7 +3,7 @@ module.exports = {
   publicPath: {
     // 开发环境
     development: '',
-    // development: '/fe-op-vue-mobile-template',
+    // development: '/vue2',
 
     // fat/uat/prod环境
     production: '/student-course',

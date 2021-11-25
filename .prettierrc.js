@@ -1,5 +1,5 @@
 module.exports = {
-  printWidth: 100, // 超过最大值换行
+  printWidth: 180, // 超过最大值换行
   tabWidth: 2, // 缩进字节数
   useTabs: false, // 缩进不使用tab，使用空格
   semi: true, // 句尾添加分号
@@ -17,4 +17,3 @@ module.exports = {
   requireConfig: false, // Require a 'prettierconfig' to format prettier
   trailingComma: 'es5', // 在对象或数组最后一个元素后面是否加逗号（在ES5中加尾逗号）
 };
-

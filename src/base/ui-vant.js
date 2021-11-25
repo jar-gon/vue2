@@ -7,8 +7,7 @@ let UiVant = { Toast };
 
 UiVant.install = function (Vue, uiArr) {
   // Empty props default image
-  Empty.props.image.default =
-    'https://web-data.zmlearn.com/image/f660c9f5-b5d0-4384-bec6-3bd0f264f318.png';
+  Empty.props.image.default = 'https://web-data.zmlearn.com/image/f660c9f5-b5d0-4384-bec6-3bd0f264f318.png';
   Button.props.size.default = 'small';
   Vue.prototype.$loading = Loading.service;
   Vue.prototype.$alert = Dialog.alert;
